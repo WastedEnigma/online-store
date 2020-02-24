@@ -1,0 +1,3 @@
+2019-12-20 13:02:07 : OnlineStoreApplication.init(): start
+2019-12-20 13:02:07 : OnlineStoreApplication.init(): find product by id
+2019-12-20 13:02:07 : OnlineStoreApplication.init(): end

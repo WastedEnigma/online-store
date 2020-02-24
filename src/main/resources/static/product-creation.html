@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Creation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles/input-field.css">
+    <link rel="stylesheet" href="styles/table.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper indigo darken-2">
+                <a class="brand-logo" style="margin-left: 20px">
+                    <i class="material-icons left">headset</i>
+                    Music World
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li id="cart" style="display: none"><a href="/favorite-products-page">My Cart</a></li>
+                    <li><a href="/catalog">Catalog</a></li>
+                    <li id="product-page" style="display: none" class="active"><a href="#">Product Page</a></li>
+                    <li style="margin-right: 20px"><a href="/login-page" id="log-out-btn">Log Out</a></li>
+                    <li style="margin-right: 10px" class="username-container"></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container">
+        <div class="input-field">
+            <input class="name-input" type="text" placeholder="Name">
+        </div>
+        <div class="input-field">
+            <input class="price-input" type="number" placeholder="Price in $">
+        </div>
+
+        <div class="input-field">
+            <textarea class="description-input materialize-textarea" placeholder="Description"></textarea>
+        </div>
+
+        <div class="input-checkbox">
+            <label>
+                <input class="filled-in available-checkbox" type="checkbox" />
+                <span>Available</span>
+            </label>
+        </div>
+
+        <div class="input-field">
+            <select id="category-select">
+                <option disabled selected>Choose subcategory</option>
+            </select>
+        </div>
+
+        <div class="input-field">
+            <select id="model-select">
+                <option disabled selected>Choose model</option>
+            </select>
+        </div>
+
+        <div class="file-field input-field">
+            <div class="btn">
+                <i class="material-icons">file_upload</i>
+                <input class="file-select" type="file">
+            </div>
+            <div class="file-path-wrapper">
+                <input class="file-path validate" type="text" placeholder="Upload image">
+            </div>
+        </div>
+
+        <div>
+            <button class="create-btn btn waves-effect waves-light">
+                Submit
+            </button>
+        </div>
+
+        <div class="table products-table">
+            <table class="highlight">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Description</th>
+                    <th>Available</th>
+                    <th>Sub category</th>
+                    <th>Model</th>
+                    <th>Image</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody id="products">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script type="module" src="src/constants.js"></script>
+    <script type="module" src="src/request.js"></script>
+    <script type="module" src="src/creation/product-creation.js"></script>
+    <script type="module" src="src/user/user-display.js"></script>
+    <script type="module" src="src/user/logout.js"></script>
+</body>
+</html>

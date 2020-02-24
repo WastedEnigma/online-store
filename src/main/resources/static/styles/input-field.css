@@ -1,0 +1,12 @@
+html, body {
+   width: 100%;
+}
+
+.container {
+    padding: 20px;
+    width: 100%;
+}
+
+.input-field {
+    width: 30%;
+}

@@ -1,0 +1,23 @@
+.title {
+    text-align: center;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.photo {
+    width: 70%;
+}
+
+.photo-container {
+    width: 50%;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}

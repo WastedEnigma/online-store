@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper indigo darken-2">
+                <a class="brand-logo" style="margin-left: 20px">
+                    <i class="material-icons left">headset</i>
+                    Music World
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container" style="width: 30%">
+        <form class="pure-form" style="margin-top: 20px">
+            <fieldset style="border: none">
+                <div class="input-field">
+                    <input id="username-input" type="text" placeholder="Username" required>
+                    <input id="password-input" type="password" placeholder="Password" required>
+                    <input id="confirm-password-input" type="password" placeholder="Confirm password" required>
+                </div>
+                <div>
+                    <button type="submit" class="register-btn btn waves-effect waves-light">Register</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+    <script type="module" src="src/constants.js"></script>
+    <script type="module" src="src/user/registration.js"></script>
+</body>
+</html>

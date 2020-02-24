@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper indigo darken-2">
+                <a class="brand-logo" style="margin-left: 20px">
+                    <i class="material-icons left">headset</i>
+                    Music World
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container" style="width: 20%">
+        <div class="input-field">
+            <input id="username-input" type="text" placeholder="Username">
+            <input id="password-input" type="password" placeholder="Password">
+        </div>
+        <div>
+            <button class="login-btn btn waves-effect waves-light">Log in</button>
+        </div>
+        <div style="padding: 10px">
+            <a href="/registration-page" class="hoverable"><strong>Not registered? Click here for registration</strong></a>
+        </div>
+    </div>
+
+    <script type="module" src="src/constants.js"></script>
+    <script type="module" src="src/user/login.js"></script>
+</body>
+</html>

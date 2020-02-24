@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="styles/product.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper indigo darken-2">
+                <a class="brand-logo" style="margin-left: 20px">
+                    <i class="material-icons left">headset</i>
+                    Music World
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li id="cart" style="display: none"><a href="/favorite-products-page">My Cart</a></li>
+                    <li><a href="/catalog">Catalog</a></li>
+                    <li id="product-page" style="display: none"><a href="/product-page">Product Page</a></li>
+                    <li style="margin-right: 20px"><a href="/login-page" id="log-out-btn">Log Out</a></li>
+                    <li style="margin-right: 10px" class="username-container"></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <h3 class="title"></h3>
+    <div class="container">
+    </div>
+
+    <div class="btn-container">
+        <button id="cart-btn" class="add-to-favorite-btn btn waves-effect waves-light">Add to cart</button>
+    </div>
+
+    <script type="module" src="src/constants.js"></script>
+    <script type="module" src="src/product.js"></script>
+    <script type="module" src="src/user/user-display.js"></script>
+</body>
+</html>

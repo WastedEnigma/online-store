@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Catalog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="styles/catalog.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper indigo darken-2">
+                <a class="brand-logo" style="margin-left: 20px">
+                    <i class="material-icons left">headset</i>
+                    Music World
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li id="cart" style="display: none"><a href="/favorite-products-page">My Cart</a></li>
+                    <li class="active"><a href="#">Catalog</a></li>
+                    <li id="product-page" style="display: none"><a href="/product-page">Product Page</a></li>
+                    <li style="margin-right: 20px"><a href="/login-page" id="log-out-btn">Log Out</a></li>
+                    <li style="margin-right: 10px" class="username-container"></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="controllers">
+        <div class="selector-container">
+            <label for="page-size">Page size</label>
+            <select id="page-size">
+                <option value="4" selected>4</option>
+                <option value="8">8</option>
+                <option value="50">50</option>
+            </select>
+        </div>
+
+        <div class="name-filter">
+            <div class="input">
+                <input class="name-input" type="text" placeholder="Name">
+            </div>
+        </div>
+
+        <div class="subcategory-filter">
+            <select id="subcategory-selector">
+                <option selected>All</option>
+            </select>
+        </div>
+
+        <div class="price-filter">
+            <div class="input">
+                <input class="max-price-input" type="number" placeholder="Max price">
+            </div>
+            <div class="input">
+                <input class="min-price-input" type="number" placeholder="Min price">
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-left: 8%">
+        <button class="find-btn btn waves-effect waves-light" style="margin-left: 10px">
+            Find
+        </button>
+    </div>
+
+    <div class="container">
+    </div>
+
+    <div class="page-controller">
+        <ul class="pagination center">
+            <li class="waves-effect"><a class="btn-previous"><i class="material-icons">chevron_left</i></a></li>
+            <li><a id="page-number">0</a></li>
+            <li class="waves-effect"><a class="btn-next"><i class="material-icons">chevron_right</i></a></li>
+        </ul>
+    </div>
+
+    <script type="module" src="src/constants.js"></script>
+    <script type="module" src="src/catalog.js"></script>
+    <script type="module" src="src/user/user-display.js"></script>
+    <script type="module" src="src/user/logout.js"></script>
+</body>
+</html>

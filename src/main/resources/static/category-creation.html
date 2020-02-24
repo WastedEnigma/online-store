@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Category Creation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="table categories-table">
+            <table class="highlight">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody id="categories">
+                </tbody>
+            </table>
+        </div>
+
+        <a class="waves-effect waves-light btn modal-trigger" href="#modal1" style="margin-top: 20px">Create</a>
+
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <input type="text" id="category-id" style="display: none" placeholder="ID">
+                <input type="text" id="category-name" placeholder="Name">
+                <button id="category-create-btn" class="btn waves-effect waves-light">Submit</button>
+            </div>
+            <div class="modal-footer">
+                <a class="modal-close waves-effect waves-green btn-flat">
+                    <i class="material-icons">close</i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="src/constants.js"></script>
+    <script type="module" src="src/request.js"></script>
+    <script type="module" src="src/creation/category-creation.js"></script>
+</body>
+</html>
