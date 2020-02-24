@@ -13,23 +13,28 @@ if (!window.localStorage.getItem('onlineStoreToken')) {
     document.getElementById('cart').style.display = 'block';
 }
 
-/*$.ajax({
+$.ajax({
     url: `${URL}/user/checkToken`,
     type: 'get',
-    success: (res) => {
-
+    headers: {
+        "Authorization": "Bearer " + window.localStorage.getItem('onlineStoreToken')
     },
-    error: (res) => {
+    success: () => {
+        document.getElementById('product-page').style.display = 'block';
+        document.getElementById('cart').style.display = 'none';
 
+        if (document.getElementById('cart-btn') !== null) {
+            document.getElementById('cart-btn').style.display = 'none';
+        }
     }
-});*/
+});
 
-if (window.localStorage.getItem('username') === 'Oleg Tokarenko') {
+/*if (window.localStorage.getItem('username') === 'Oleg Tokarenko') {
     document.getElementById('product-page').style.display = 'block';
     document.getElementById('cart').style.display = 'none';
 
     if (document.getElementById('cart-btn') !== null) {
         document.getElementById('cart-btn').style.display = 'none';
     }
-}
+}*/
 
