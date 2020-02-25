@@ -4,6 +4,9 @@ const $usernameInput = $('#username-input');
 const $passwordInput = $('#password-input');
 const $loginBtn = $('.login-btn');
 
+window.localStorage.setItem('username', '');
+window.localStorage.setItem('onlineStoreToken', '');
+
 $(document).ready(() => {
     $loginBtn.click(() => {
         const request = {
@@ -25,4 +28,3 @@ $(document).ready(() => {
         });
     });
 });
-

@@ -28,13 +28,3 @@ $.ajax({
         }
     }
 });
-
-/*if (window.localStorage.getItem('username') === 'Oleg Tokarenko') {
-    document.getElementById('product-page').style.display = 'block';
-    document.getElementById('cart').style.display = 'none';
-
-    if (document.getElementById('cart-btn') !== null) {
-        document.getElementById('cart-btn').style.display = 'none';
-    }
-}*/
-

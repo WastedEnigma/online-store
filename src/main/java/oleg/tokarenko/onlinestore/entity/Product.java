@@ -44,9 +44,6 @@ public class Product {
     @OneToMany(mappedBy = "product", cascade = CascadeType.REMOVE)
     private List<ProductForCart> productForCarts = new ArrayList<>();
 
-    @OneToMany(mappedBy = "product", cascade = CascadeType.REMOVE)
-    private List<ProductForOrder> productForOrders = new ArrayList<>();
-
     @ManyToMany
     private Set<User> users = new HashSet<>();
 }
